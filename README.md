@@ -1,58 +1,24 @@
-<h1>JWipe - Disk Sanitization</h1>
+# Sudoku Game Project
 
- ### [YouTube Demonstration](https://youtu.be/7eJexJVCqJo)
+A C++ Sudoku puzzle generator and solver with an interactive game interface, timer, and leaderboard system.
 
-<h2>Description</h2>
-Project consists of a simple PowerShell script that walks the user through "zeroing out" (wiping) any drives that are connected to the system. The utility allows you to select the target disk and choose the number of passes that are performed. The PowerShell script will configure a diskpart script file based on the user's selections and then launch Diskpart to perform the disk sanitization.
-<br />
+## Features
 
+- **Sudoku Generation**: Generates random valid Sudoku puzzles using backtracking with randomization.
+- **Puzzle Solving**: Includes a solver to check solutions and ensure puzzle uniqueness.
+- **Interactive Gameplay**:
+  - Play with 3 attempts per game.
+  - Timer to track completion time.
+  - Fill cells by entering coordinates (row, column, number).
+- **Difficulty Levels**: Choose the number of empty cells (1-81) to adjust difficulty.
+- **Leaderboard**: Save and view top scores for different difficulty levels in `rekordy.txt`.
 
-<h2>Languages and Utilities Used</h2>
+## Installation
 
-- <b>PowerShell</b> 
-- <b>Diskpart</b>
+1. **Requirements**:
+   - C++ compiler (e.g., `g++`).
+   - CMake (optional, for building).
 
-<h2>Environments Used </h2>
-
-- <b>Windows 10</b> (21H2)
-
-<h2>Program walk-through:</h2>
-
-<p align="center">
-Launch the utility: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Select the disk:  <br/>
-<img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Enter the number of passes: <br/>
-<img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Confirm your selection:  <br/>
-<img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Wait for process to complete (may take some time):  <br/>
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-
-<!--
- ```diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
-```
---!>
+2. **Build Instructions**:
+   ```bash
+   g++ sudoku.cpp gamecycle.cpp main.cpp -o sudoku_game
